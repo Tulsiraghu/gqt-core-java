@@ -7,13 +7,18 @@ public class ArrayOperations2 {
 	Scanner sc = new Scanner(System.in);
 
 	void createArray() {
-		int cls = 3; 
-		int stu = 3; 
-		arr = new String[cls][stu];
-		System.out.println("Array for 3 classes with 3 students each created.");
-		System.out.println("-------------------");
+		System.out.println("Enter class count.");
+		int cls = sc.nextInt(); 
+		arr = new String[cls][];
+		for(int i = 0; i<arr.length; i++) {
+			System.out.println("Enter count of student inside the class no:"+(i+1));
+			arr[i] = new String[sc.nextInt()];
+		}
+		System.out.println("Array is created");
+		System.out.println("----------------");
 	}
-
+		
+				
 	void collectData() {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println("Inside Class " + (i + 1));
@@ -23,7 +28,7 @@ public class ArrayOperations2 {
 			}
 			System.out.println("----------------");
 		}
-		System.out.println("All student names collected successfully.");
+		System.out.println("Data Created.");
 		System.out.println("--------------------");
 	}
 
